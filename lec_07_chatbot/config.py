@@ -1,1 +1,2 @@
 apikey = "1421110977:AAG-IHVDlEESneUuatvyQR5-DMuz67kxhGc"
+sticker_id = "CAACAgIAAxkBAAIBmV_GKthXR2jNn1m8bXyo6dBqWgapAAIRAgACCTs7E9iC43rBPvyCHgQ"

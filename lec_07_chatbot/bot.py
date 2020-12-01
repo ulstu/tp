@@ -4,7 +4,7 @@ from telebot import types
 
 users = {}
 
-sticker_id = "CAACAgIAAxkBAAIBmV_GKthXR2jNn1m8bXyo6dBqWgapAAIRAgACCTs7E9iC43rBPvyCHgQ"
+sticker_id = config.sticker_id
 
 bot = telebot.TeleBot(config.apikey)
 
