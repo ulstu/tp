@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Тестовая галерея изображений</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link rel="stylesheet" href="css/style.css" type="text/css"/>
+    <link rel="stylesheet" href="js/jquery-ui-1.12.1/jquery-ui.min.css" type="text/css"/>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" type="text/css"/>
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <main role="main">
+        <div class="album py-5 bg-light">
+            <div class="container">
+                <div class="row">
+                    <h1 class="bd-title">Галерея веселых картинок кафедры ВТ</h1><br />
+                </div>
+                <div class="row" id="imageList">
+                </div>
+            </div>
+        </div>
+    </main>
+    <div id="edit_dialog" title="Просмотр" style="display: none">
+        <table cellpadding="5">
+            <tr>
+                <td>
+                    <div id="image_container">
+                        <canvas id="image_canvas" width="600" height="400"></canvas>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        <div style="color: red" id="status"></div>
+    </div>
+</body>
