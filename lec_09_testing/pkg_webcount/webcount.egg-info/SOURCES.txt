@@ -1,0 +1,13 @@
+MANIFEST.in
+conftest.py
+setup.py
+test/__init__.py
+test/functions.py
+test/test_functions.py
+webcount/__init__.py
+webcount/functions.py
+webcount.egg-info/PKG-INFO
+webcount.egg-info/SOURCES.txt
+webcount.egg-info/dependency_links.txt
+webcount.egg-info/requires.txt
+webcount.egg-info/top_level.txt

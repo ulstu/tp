@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="utf-8"?><testsuites><testsuite name="pytest" errors="0" failures="0" skipped="0" tests="1" time="0.067" timestamp="2021-02-26T18:01:55.193196" hostname="Kirills-MacBook-Air.local"><testcase classname="test.test_functions" name="test_with_patch" time="0.001" /></testsuite></testsuites>

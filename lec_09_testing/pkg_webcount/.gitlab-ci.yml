@@ -1,0 +1,41 @@
+image: "python:3.8"
+
+before_script:
+  - python --version
+  - pip install -r requirements.txt
+
+stages:
+  - Static Analysis
+  - Test
+  - Environments Test
+
+
+flake8:
+  stage: Static Analysis
+  script:
+  - flake8 webcount/*.py
+
+pylint:
+  stage: Static Analysis
+  allow_failure: true
+  script:
+  - pylint -d C0301 webcount/*.py
+
+mypy:
+  stage: Static Analysis
+  script:
+  - pwd
+  - ls -l
+  - python3 -m mypy webcount/*.py
+  
+pytest:
+  stage: Test
+  script:
+    - echo "Running unit tests…"
+    - pytest --verbose
+
+toxtest:
+  stage: Environments Test
+  script:
+    - echo "Running tox unit tests…"
+    - tox

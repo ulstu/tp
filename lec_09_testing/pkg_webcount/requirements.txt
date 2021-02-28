@@ -1,0 +1,7 @@
+requests
+pytest
+tox
+flake8
+mypy
+pylint
+pytest-benchmark
