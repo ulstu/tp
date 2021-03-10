@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta charset="UTF-8">
+	<titlе>Главная : : Страница сотрудников</titlе>
+	</head>
+	<body>
+		<h1>Сорудники</h1>
+		{% for p in persons %}
+		<div>
+		<h2>{{ p.first_name }} {{ p.last_name }} {{ p.patronymic }}</h2>
+		<р>{{ p.bio }}</р>
+		<р>{{ p.publications}}</р>
+		</div>
+		{% endfor %}
+	</body>
+</html>
