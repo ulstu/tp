@@ -18,4 +18,4 @@ def allpersons(request):
 
 def allpersonssh(request):
 	persons = Person.objects.order_by('-last_name')
-	return render(request, 'persons/index.html ', {'persons': persons})
+	return render(request, "persons/index.html", {'persons': persons}, content_type='text/html; charset=utf-8')
