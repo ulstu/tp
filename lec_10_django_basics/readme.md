@@ -207,3 +207,6 @@ def allpersonssh(request):
 	persons = Person.objects.order_by('-last_name')
 	return render(request, 'persons/index.html ', {'persons': persons})
 ```
+
+# Запись лекции
+https://youtu.be/8pvODiWW1dM
