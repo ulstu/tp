@@ -1,3 +1,3 @@
-# 1 часть лекции
 
-https://youtu.be/GauXf_NX-gA
+
+https://www.youtube.com/watch?v=teinHAHRWg4
