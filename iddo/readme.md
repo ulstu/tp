@@ -1,5 +1,5 @@
 # Запись лекций
-* https://youtu.be/GauXf_NX-gA
+* https://www.youtube.com/watch?v=teinHAHRWg4
 * https://youtu.be/GvKVjOZyxzQ
 * https://youtu.be/b805b_UPAG0
 * https://youtu.be/8KDbItdq3yA
