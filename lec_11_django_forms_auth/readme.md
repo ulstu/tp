@@ -8,3 +8,5 @@
 ## JsonResponse (Dictionary)
 ## Авторизация и аутенфикация + отправка почты
 
+Запись лекции
+https://youtu.be/uy_04Opvlrc
