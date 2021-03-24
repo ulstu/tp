@@ -1,17 +1,7 @@
 {% extends "header.html" %}
 
-{% block title %}Список преподавателей{% endblock %}
+{% block title %}Факультет информационных систем и технологий{% endblock %}
 
 {% block content %}
-		<h1>Сорудники</h1>
-		{% for p in persons %}
-		<div>
-			<h2>{{ p.first_name }} {{ p.last_name }} {{ p.patronymic }}</h2>
-			<div> {{ p.person_id }} </div>
-			<img src="/uploads/{{ p.photo }}" alt="image" class="photo-img" />
-			<div> {{ p.bio }} </div>
-			<div> {{ p.publications}} </div>
-			<div><a href="{% url 'teacher_course' p.pk %}">Список дисциплин</a></div>
-		</div>
-		{% endfor %}
+	<h1>Факультет информационных систем и технологий</h1>
 {% endblock %}

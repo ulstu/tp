@@ -62,7 +62,7 @@ def main(config_filename="settings.ini"):
                             '/static':{
                                 'tools.staticdir.on': True,
                                 'tools.staticdir.dir': 'static',
-                                'tools.staticdir.index': 'index.html',
+                                'tools.staticdir.index': 'persons.html',
                                 'tools.auth_digest.on': True,
                                 'tools.auth_digest.realm': config["Server"]["host"],
                                 'tools.auth_digest.get_ha1': auth_digest.get_ha1_dict_plain(USERS),

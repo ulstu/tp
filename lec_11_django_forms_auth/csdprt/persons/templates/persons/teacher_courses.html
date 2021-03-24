@@ -1,8 +1,9 @@
 {% extends "header.html" %}
 
 {% block title %}Дисциплины препоадвателя{% endblock %}
-
+{% load bootstrap4 %}
 {% block content %}
+
 <h1>Преподаватель</h1>
 <div>
     <h2>{{ teacher.first_name }} {{ teacher.last_name }} {{ teacher.patronymic }}</h2>
@@ -12,12 +13,21 @@
     </div>
 </div>
 <h2>Список преподаваемых дисциплин</h2>
+{% if perms.persons.add_course or user.email == teacher.email %}
+<a href="{% url 'persons:add_course' %}">Добавить</a>
+{% endif %}
 <div>
     {% for c in courses %}
         <h3>{{ c.name }}</h3>
+        {% if perms.persons.delete_course or user.email == teacher.email %}
+            <a href="{% url 'persons:remove_course' c.pk %}">Удалить</a>
+        {% endif %}
+        {% if perms.persons.change_course or user.email == teacher.email %}
+            <a href="{% url 'persons:update_course' c.pk %}">Править</a>
+        {% endif %}
         <div>{{ c.description }}</div>
         <div>{{ c.learning_outcomes }}</div>
     {% endfor %}
-    <a href="{% url 'index' %}">К списку преподавателей</a>
+
 </div>
 {% endblock %}

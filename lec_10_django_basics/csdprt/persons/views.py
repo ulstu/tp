@@ -11,11 +11,11 @@ def index(request) :
 	return HttpResponse(s, content_type='text/plain; charset=utf-8')
 
 def allpersons(request):
-	template = loader.get_template('persons/index.html')
+	template = loader.get_template('persons/persons.html')
 	persons = Person.objects.order_by('-last_name')
 	context = {'persons': persons}
 	return HttpResponse(template.render(context, request), content_type='text/html; charset=utf-8')
 
 def allpersonssh(request):
 	persons = Person.objects.order_by('-last_name')
-	return render(request, "persons/index.html", {'persons': persons}, content_type='text/html; charset=utf-8')
+	return render(request, "persons/persons.html", {'persons': persons}, content_type='text/html; charset=utf-8')

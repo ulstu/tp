@@ -1,0 +1,38 @@
+{% extends "header.html" %}
+{% load bootstrap4 %}
+{% block title %} Правка личных данных {% endblock %}
+
+{% block content %}
+<header class="bg-dark pt-9 pb-11 d-none d-md-block">
+    <div class="container-md">
+        <div class="row align-items-center">
+            <div class="col">
+
+                <!-- Heading -->
+                <h1 class="fw-bold text-white mb-2">
+                    Изменение данных профиля
+                </h1>
+
+            </div>
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</header>
+<div class="container-md">
+    <div class="row">
+        <div class="col-12 col-md-9">
+            <div class="card card-bleed shadow-light-lg mb-6">
+                <div class="card card-bleed shadow-light-lg mb-6">
+                    <div class="card-header">Изменение данных пользователя {{user.username}}</div>
+                    <div class="card-body">
+                        <form method="post">
+                            {% csrf_token %}
+                            {% bootstrap_form form layout='horizontal' %}
+                            {% buttons submit='Сохранить' %}{% endbuttons %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

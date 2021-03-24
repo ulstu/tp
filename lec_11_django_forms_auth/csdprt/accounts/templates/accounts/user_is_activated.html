@@ -1,0 +1,7 @@
+{% extends "header.html" %}
+{% block title %} Пользователь уже активен {% endblock%}
+{% block content %}
+<h2>Активация</h2>
+<p>Пользователь с таким  именем  уже был активирован.</p>
+<p><a href="{% url 'accounts:login' %}">Войти на сайт</a></p>
+{% endblock %}

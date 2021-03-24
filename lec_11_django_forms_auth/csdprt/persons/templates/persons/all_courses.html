@@ -1,0 +1,20 @@
+{% extends "header.html" %}
+
+{% block title %}Все курсы{% endblock %}
+
+{% block content %}
+
+<h1>Курсы</h1>
+<a href="{% url 'persons:add_course' %}">Добавить</a>
+<div>
+    {% for c in course_list %}
+        <h3>{{ c.name }}</h3>
+        <a href="{% url 'persons:remove_course' c.pk %}">Удалить</a>
+        <a href="{% url 'persons:update_course' c.pk %}">Править</a>
+        <div>{{ c.person_id }}</div>
+        <div>{{ c.description }}</div>
+        <div>{{ c.learning_outcomes }}</div>
+    {% endfor %}
+
+</div>
+{% endblock %}

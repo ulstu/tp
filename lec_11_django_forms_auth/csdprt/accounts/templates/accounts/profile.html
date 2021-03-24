@@ -1,0 +1,11 @@
+{% extends "header.html" %}
+{% block title %} Профиль  пользователя {% endblock %}
+{% block content %}
+<h2>Профиль пользователя {{ user.username }}</h2>
+
+{% if user.first_name and user.username %}
+<p>Здравствуйте, {{ user.first_name }} {{ user.last_name }}!</p>
+{% else %}
+<p>Здравствуйте!</p>
+{% endif %}
+{% endblock %}

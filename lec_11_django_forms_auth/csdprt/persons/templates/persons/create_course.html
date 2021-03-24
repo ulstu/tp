@@ -1,0 +1,17 @@
+{% extends "header.html" %}
+
+{% block title %}Дисциплины препоадвателя{% endblock %}
+
+{% block content %}
+
+<h1>Добавление курса</h1>
+<div>
+    <a href=" {% url 'persons:index' %} ">Главная</a>
+    <form method="post">
+    {% csrf_token %}
+        {{ form.as_p }}
+    <input type="submit" vаluе="Сохранить" />
+    {{ dummy }}
+</div>
+</form>
+{% endblock %}

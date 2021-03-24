@@ -1,0 +1,12 @@
+{% extends "header.html" %}
+
+{% block title %}Дисциплины препоадвателя{% endblock %}
+
+{% block content %}
+<h2>Удаление дисциплины</h2>
+    <form action="" method="post">{% csrf_token %}
+      <p>Вы действительно хотите удалить дисциплину "{{ course.name }}"?</p>
+      <input type="submit" value="Удалить" />
+        <a href="{% url 'persons:index' %}">Отмена</a>
+    </form>
+{% endblock content %}

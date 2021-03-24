@@ -2,12 +2,469 @@
 <html lang="ru">
 <head>
     <title>{% block title %}My amazing site{% endblock %}</title>
+    <meta charset="utf-8"/>
     {% load static %}
-    <link rel="stylesheet" href="{% static '/persons/style.css' %}" />
+    <link rel="stylesheet" href="{% static '/persons/style.css' %}"/>
+    <link rel="stylesheet" href="{% static '/persons/assets/css/theme.bundle.css' %}"/>
+    <link rel="stylesheet" href="{% static '/persons/assets/css/libs.bundle.css' %}"/>
 </head>
-<body>
-<div id="content">
+<body class="main bg-light" style="padding-top: 84px;" data-aos-easing="ease-out-quad" data-aos-duration="700" data-aos-delay="0">
+
+<nav class="navbar navbar-expand-lg navbar-light fixed-top bg-white border-bottom">
+    <div class="container-fluid">
+
+        <!-- Brand -->
+        <a class="navbar-brand" href="{% url 'persons:index' %}">
+            <img src="{% static '/persons/img/fist_logo.png'%}" class="navbar-brand-img" alt="..."> ФИСТ УлГТУ
+        </a>
+
+        <!-- Toggler -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Collapse -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+
+            <!-- Toggler -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+                    aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fe fe-x"></i>
+            </button>
+
+            <!-- Navigation -->
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarEnrolee" data-bs-toggle="dropdown" href="#"
+                       aria-haspopup="true" aria-expanded="false">
+                        Абитуриентам
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
+                        <div class="row gx-0">
+                            <div class="col-12 col-lg-12">
+                                <div class="dropdown-body">
+                                    <div class="row gx-0">
+                                        <div class="col-6">
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Как поступить?
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../coworking.html">
+                                                <b>Компьютерная школа ФИСТ</b>
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Подача документов
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Проходные баллы
+                                            </a><br/>
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Куда поступить?
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../desktop-app.html">
+                                                Направления подготовки ФИСТ
+                                            </a>
+                                            <a class="dropdown-item" href="../mobile-app.html">
+                                                Как выбрать спецальность?
+                                            </a>
+
+                                        </div>
+                                        <div class="col-6">
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Зачем идти в вуз?
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../index.html">
+                                                Что дает высшее образование?
+                                            </a>
+                                            <a class="dropdown-item" href="../startup.html">
+                                                Кем работать после ФИСТ?
+                                            </a>
+                                            <a class="dropdown-item" href="../enterprise.html">
+                                                Где работать после ФИСТ?
+                                            </a>
+                                            <br/>
+
+                                            <h6 class="dropdown-header">
+                                                Олимпиады и конкурсы
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../index.html">
+                                                Чемпионат по программированию ulivt.ru
+                                            </a>
+                                            <a class="dropdown-item" href="../startup.html">
+                                                Всероссийская олимпиада Бельчонок
+                                            </a>
+                                            <a class="dropdown-item" href="../enterprise.html">
+                                                Конкурс Master IT
+                                            </a>
+
+                                        </div>
+                                    </div> <!-- / .row -->
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarStudent" data-bs-toggle="dropdown" href="#"
+                       aria-haspopup="true" aria-expanded="false">
+                        Студентам
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
+                        <div class="row gx-0">
+                            <div class="col-12 col-lg-12">
+                                <div class="dropdown-body">
+                                    <div class="row gx-0">
+                                        <div class="col-6">
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Навигатор
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../coworking.html">
+                                                Расписание занятий
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Официальные адреса и контакты
+                                            </a><br/>
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Трудоустройство
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../index.html">
+                                                Открытые вакансии
+                                            </a>
+                                            <a class="dropdown-item" href="../enterprise.html">
+                                                Прохождение практики
+                                            </a>
+
+                                        </div>
+                                        <div class="col-6">
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                F.A.Q.
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../desktop-app.html">
+                                                Командировки
+                                            </a>
+                                            <a class="dropdown-item" href="../mobile-app.html">
+                                                Заказ справок
+                                            </a>
+                                            <a class="dropdown-item" href="../mobile-app.html">
+                                                Общежития
+                                            </a>
+                                            <a class="dropdown-item" href="../mobile-app.html">
+                                                Отчисление
+                                            </a>
+                                            <a class="dropdown-item" href="../mobile-app.html">
+                                                Пересдачи экзаменов / зачетов
+                                            </a>
+                                            <a class="dropdown-item" href="../mobile-app.html">
+                                                Стипендии
+                                            </a>
+                                            <a class="dropdown-item" href="../mobile-app.html">
+                                                Перевод на бюджетную форму
+                                            </a>
+
+                                        </div>
+                                    </div> <!-- / .row -->
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarAchievements" data-bs-toggle="dropdown" href="#"
+                       aria-haspopup="true" aria-expanded="false">
+                        Достижения
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
+                        <div class="row gx-0">
+                            <div class="col-12 col-lg-12">
+                                <div class="dropdown-body">
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Лаборатории
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../coworking.html">
+                                                Спортивное программирование
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Робототехника
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Искусственный интеллект
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                IT-Academy Samsung (Интернет вещей)
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Huawei (Сети и телекоммуникации)
+                                            </a>
+                                            <br/>
+
+
+                                        </div>
+                                        <div class="col-4">
+
+                                            <h6 class="dropdown-header">
+                                                Знай наших
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../desktop-app.html">
+                                                ИТ-компании
+                                            </a>
+                                            <a class="dropdown-item" href="../mobile-app.html">
+                                                Выпускники
+                                            </a>
+
+                                        </div>
+                                    </div> <!-- / .row -->
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarCourses" data-bs-toggle="dropdown" href="#"
+                       aria-haspopup="true" aria-expanded="false">
+                        Курсы
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
+                        <div class="row gx-0">
+                            <div class="col-12 col-lg-12">
+                                <div class="dropdown-body">
+                                    <div class="row gx-0">
+                                        <div class="col-6">
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Компьютерная школа (ДО)
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Подготовка к ЕГЭ по информатике
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Подготовка к ОГЭ по информатике
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Олимпиадное программирование
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Инженерное программирование
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Геймдизайн
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Игры на платформе Unity
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Игровые чат-боты на языке Python
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Компьютерная графика
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Разработка Web-сайтов
+                                            </a>
+
+
+                                        </div>
+                                        <div class="col-6">
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Для взрослых
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../desktop-app.html">
+                                                Профессиональная переподготовка с нуля
+                                            </a>
+                                            <br/>
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Для студентов
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../index.html">
+                                                Иностранный язык
+                                            </a>
+                                            <a class="dropdown-item" href="../startup.html">
+                                                Курсы ИТ-компаний
+                                            </a>
+
+                                        </div>
+                                    </div> <!-- / .row -->
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarAbout" data-bs-toggle="dropdown" href="#"
+                       aria-haspopup="true" aria-expanded="false">
+                        О факультете
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
+                        <div class="row gx-0">
+                            <div class="col-12 col-lg-12">
+                                <div class="dropdown-body">
+                                    <div class="row gx-0">
+                                        <div class="col-8">
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Кафедры
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Вычислительная техника
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Прикладная математика и информатика
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Информационные системы
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Измерительно-вычислительные комплексы
+                                            </a>
+                                            <br/>
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Направления подготовки
+                                            </h6>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Бакалавриат
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Магистратура
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Аспирантура
+                                            </a>
+                                            <a class="dropdown-item" href="../rental.html">
+                                                Докторантура
+                                            </a>
+
+                                        </div>
+                                        <div class="col-4">
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                История
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../desktop-app.html">
+                                                История ФИСТ
+                                            </a>
+                                            <br/>
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Контакты
+                                            </h6>
+
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="../index.html">
+                                                Контактные данные
+                                            </a>
+
+                                        </div>
+                                    </div> <!-- / .row -->
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                    </div>
+                </li>
+            </ul>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" id="navbarAccount" data-bs-toggle="dropdown" href="#"
+                       aria-haspopup="true" aria-expanded="false">
+                        {% if user.is_authenticated %}
+                        {{ user.username }}
+                        {% else %}
+                        Аккаунт
+                        {% endif %}
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-xl p-0" aria-labelledby="navbarLandings">
+                        <div class="row gx-0">
+                            <div class="col-4 col-lg-4">
+                                <div class="dropdown-body">
+                                    <div class="row gx-0">
+                                        <div class="col-12">
+
+                                            <!-- Heading -->
+                                            <h6 class="dropdown-header">
+                                                Управление
+                                            </h6>
+
+                                            {% if user.is_authenticated %}
+                                            <!-- List -->
+                                            <a class="dropdown-item" href="{% url 'accounts:profile_change' %}">Данные профиля</a>
+                                            <a class="dropdown-item" href="{% url 'accounts:password_change' %}">Сменить пароль</a>
+                                            <a class="dropdown-item" href="{% url 'accounts:logout' %}">Выйти</a>
+                                            {% else %}
+                                                <a href="{% url 'accounts:login' %}">Войти</a>
+                                            {% endif %}
+                                        </div>
+                                    </div> <!-- / .row -->
+                                </div>
+                            </div>
+                        </div> <!-- / .row -->
+                    </div>
+                </li>
+            </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+</nav>
+<section>
+    <div class="container-fluid">
         {% block content %}{% endblock %}
     </div>
+
+</section>
+<script src="https://api.mapbox.com/mapbox-gl-js/v0.53.0/mapbox-gl.js"></script>
+<script type="text/javascript" src="{% static '/persons/assets/js/theme.bundle.js' %}"></script>
+<script type="text/javascript" src="{% static '/persons/assets/js/vendor.bundle.js' %}"></script>
+
 </body>
 </html>

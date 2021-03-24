@@ -143,14 +143,14 @@ persons/templates/persons/index.html
 * использование шаблонов
 ```python
 def allpersons(request):
-	template = loader.get_template('persons/index.html')
+	template = loader.get_template('persons/persons.html')
 	persons = Person.objects.order_by('-last_name')
 	context = {'persons': persons}
 	return HttpResponse(template.render(context, request), content_type='text/html; charset=utf-8')
 
 def allpersonssh(request):
 	persons = Person.objects.order_by('-last_name')
-	return render(request, 'persons/index.html ', {'persons': persons})
+	return render(request, 'persons/persons.html ', {'persons': persons})
 ```
 
 
@@ -198,14 +198,14 @@ class Person(models.Model):
 views.py
 ```python
 def allpersons(request):
-	template = loader.get_template('persons/index.html')
+	template = loader.get_template('persons/persons.html')
 	persons = Person.objects.order_by('-last_name')
 	context = {'persons': persons}
 	return HttpResponse(template.render(context, request), content_type='text/html; charset=utf-8')
 
 def allpersonssh(request):
 	persons = Person.objects.order_by('-last_name')
-	return render(request, 'persons/index.html ', {'persons': persons})
+	return render(request, 'persons/persons.html ', {'persons': persons})
 ```
 
 # Запись лекции
