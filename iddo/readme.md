@@ -1,9 +1,12 @@
 # Запись лекций
-* https://www.youtube.com/watch?v=teinHAHRWg4
-* https://youtu.be/GvKVjOZyxzQ
-* https://youtu.be/b805b_UPAG0
-* https://youtu.be/8KDbItdq3yA
-* https://youtu.be/4Ha7wNoaLzI
-* https://youtu.be/RNJa12UoDF4
-* https://youtu.be/p5b7SnnVodI 
-
+[Лекция 1. Основы программирования на python](https://www.youtube.com/watch?v=teinHAHRWg4)
+[Лекция 2. Списки, numpy, файлы и исключения](https://youtu.be/b805b_UPAG0)
+[Лекция 3. Основы git](https://youtu.be/4Ha7wNoaLzI)
+[Лекция 4. Основы работы с СУБД в python](https://youtu.be/8KDbItdq3yA)
+[Лекция 5. CherryPy](https://www.youtube.com/watch?v=RNJa12UoDF4)
+[Лекция 6. TeleBot](https://youtu.be/p5b7SnnVodI)
+[Лекция 7. Функции, декораторы, многопоточность](https://youtu.be/ljg1yz3vfTY)
+[Лекция 8. Тестирование  CI](https://www.youtube.com/watch?v=41dVDmrmxhM)
+[Лекция 9. Основы django](https://youtu.be/8pvODiWW1dM)
+[Лекция 10. Основы django. Формы, MVVM, авторизация и аутенфикация](https://www.youtube.com/watch?v=uy_04Opvlrc)
+[Лекция 11. Основы Docker](https://www.youtube.com/watch?v=V0ZhysBYibM)
